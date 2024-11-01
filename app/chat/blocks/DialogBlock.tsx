@@ -47,7 +47,6 @@ export const DialogBlock = () => {
     setInputMessage('')
   }
 
-  console.log('requestStatus: ', requestStatus)
   return (
     <motion.section
       initial={{ opacity: 0 }}

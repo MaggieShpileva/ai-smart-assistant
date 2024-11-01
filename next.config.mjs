@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    ppr: 'incremental', //prerender https://nextjs.org/learn/dashboard-app/partial-prerendering#implementing-partial-prerendering
+    basePath: '/ai-smart-assistant',
+    output: 'export',
+  },
+  images: {
+    localPatterns: [
+      {
+        pathname: '/public/**',
+        search: '',
+      },
+    ],
   },
 }
 
