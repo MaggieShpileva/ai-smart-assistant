@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 export async function POST(req: Request) {
   const userMessage = await req.json()
   try {
-    const res = await customAxios.post(`?key=${process.env.API_KEY || ''}`, {
+    const res = await customAxios.post(`?key=${process.env.NEXT_PUBLIC_API_KEY || ''}`, {
       contents: [
         {
           parts: [{ text: userMessage }],
@@ -19,7 +19,7 @@ export async function POST(req: Request) {
   } catch (error) {
     return NextResponse.json(
       {
-        error: `Все плохо, ${error}`,
+        error: `api/chat error->, ${error}`,
       },
       { status: 500 }
     )

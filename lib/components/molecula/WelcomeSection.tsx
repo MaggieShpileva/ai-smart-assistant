@@ -17,6 +17,11 @@ import { Button } from '@/lib/components/atom/Button'
 import { ButtonType } from '@/lib/components/atom/Button'
 
 /**
+ * Import: Media
+ */
+import bot_image from '@/public/images/icon.svg'
+
+/**
  * Import: Animation
  */
 import { motion } from 'framer-motion'
@@ -40,7 +45,7 @@ export const WelcomeSection = () => (
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}>
-      <Image src='/images/icon.svg' alt='icon' width='500' height='700' className='max-md:w-full md:pb-20' />
+      <Image src={bot_image} alt='icon' width='500' height='700' className='max-md:w-full md:pb-20' />
     </motion.div>
   </section>
 )
