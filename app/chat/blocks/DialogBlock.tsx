@@ -43,7 +43,7 @@ export const DialogBlock = () => {
 
   const handleSubmit = async () => {
     dispatch(addUserMessage(inputMessage))
-    dispatch(generateContent(inputMessage))
+    await dispatch(generateContent(inputMessage))
     setInputMessage('')
   }
 

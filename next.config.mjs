@@ -1,17 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isProduction = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
-  experimental: {
-    basePath: '/ai-smart-assistant',
-    output: 'export',
-  },
+  reactStrictMode: true,
   images: {
-    localPatterns: [
-      {
-        pathname: '/public/**',
-        search: '',
-      },
-    ],
+    unoptimized: true,
   },
+  output: 'export',
 }
 
 export default nextConfig
